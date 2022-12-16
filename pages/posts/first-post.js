@@ -2,10 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import Layout from "../Layout";
 
 export default function FirstPost() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>First Post</title>
       </Head>
@@ -16,22 +17,23 @@ export default function FirstPost() {
       />
 
 
-      <main>
+      <main >
         <h1>This is the first post</h1>
         <p>yada, yada, yadda, blah, blah, and son on...</p>
         <h5>About the author</h5>
+
         <Image
           src="/images/avatar.jpg"
           alt="Marcelo"
           height={100}
           width={100}
-        />
 
+        />
         <nav>
-          <Link href="/">&larr; Baby come back</Link>
+          <Link href="/" >&larr; Baby come back</Link>
         </nav>
 
       </main>
-    </>
+    </Layout>
   );
 }
